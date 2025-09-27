@@ -4,6 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sudoku.Bovi",
   description: "Sudoku Website for Portfolio - Next.js + Tailwind",
+  icons: {
+    icon: "/sudoku.svg",
+    apple: "/sudoku.svg",
+  },
 };
 
 export default function RootLayout({
