@@ -40,7 +40,7 @@ export default function Timer({
   const seconds = time % 60;
 
   return (
-    <div className="text-lg font-bold text-center mt-2">
+    <div className="text-lg font-bold text-center">
       ⏱ {minutes}:{seconds.toString().padStart(2, "0")}
     </div>
   );
