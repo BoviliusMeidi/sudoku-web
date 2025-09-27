@@ -46,11 +46,7 @@ export default function HomePage() {
       if (!selected) return;
       if (e.key >= "1" && e.key <= "9") {
         handleChange(selected.row, selected.col, parseInt(e.key));
-      } else if (
-        e.key === "Backspace" ||
-        e.key === "Delete" ||
-        e.key === "0"
-      ) {
+      } else if (e.key === "Backspace" || e.key === "Delete" || e.key === "0") {
         handleChange(selected.row, selected.col, null);
       }
     };
@@ -67,9 +63,9 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center font-black p-6">
+    <main className="min-h-screen flex flex-col items-center justify-start md:justify-center font-black mt-4 md:mt-0">
       <h1 className="text-3xl font-bold mb-4">Sudoku.Bovi</h1>
-      <div className="flex flex-col justify-center items-center md:flex-row gap-6 w-full max-w-4xl">
+      <div className="flex flex-col justify-center items-center md:flex-row gap-2 w-full max-w-4xl">
         <div className="flex flex-col items-center">
           <SudokuBoard
             board={board}
@@ -83,11 +79,8 @@ export default function HomePage() {
         </div>
         <div className="w-full md:w-80">
           <div className="bg-white p-4 rounded shadow">
-            <Timer
-              isRunning={isRunning}
-              resetKey={gameId}
-            />
-            <div className="mt-4">
+            <Timer isRunning={isRunning} resetKey={gameId} />
+            <div className="mt-2">
               <Controls
                 onNewGame={handleNewGame}
                 onSolve={handleSolve}
