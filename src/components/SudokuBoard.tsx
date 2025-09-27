@@ -67,7 +67,8 @@ export default function SudokuBoard({
               ) : (
                 <input
                   type="text"
-                  value={renderValue(val)} // ✅ controlled input
+                  value={renderValue(val)}
+                  readOnly
                   onChange={(e) => onChangeCell(r, c, e.target.value)}
                   className="w-full h-full text-center focus:outline-none bg-transparent"
                   maxLength={1}
